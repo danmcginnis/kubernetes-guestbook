@@ -1,0 +1,25 @@
+id: guestbook
+kind: ReplicationController
+apiVersion: v1beta1
+desiredState:
+  replicas: 3
+  replicaSelector:
+    name: guestbook
+  podTemplate:
+    desiredState:
+      manifest:
+        version: v1beta1
+        id: guestbook
+        containers:
+          - name: guestbook
+            image: danmcginnis/guest-demo 
+            cpu: 1000
+            ports:
+             - name: api
+               containerPort: 5000
+               hostPort: 5000
+            env:
+             - key: RDB_HOST
+               value: 146.148.60.247
+labels:
+  name: guestbook

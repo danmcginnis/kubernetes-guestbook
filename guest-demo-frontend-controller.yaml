@@ -5,6 +5,8 @@ desiredState:
   replicas: 3
   replicaSelector:
     name: guestbook
+  # This template is basically identical to the single pod
+  # definition above
   podTemplate:
     desiredState:
       manifest:
@@ -12,14 +14,14 @@ desiredState:
         id: guestbook
         containers:
           - name: guestbook
-            image: danmcginnis/guest-demo 
+            image: danmcginnis/guest-demo
             cpu: 1000
             ports:
-             - name: api
-               containerPort: 5000
-               hostPort: 5000
+              - name: api
+                containerPort: 5000
+                hostPort: 5000
             env:
-             - key: RDB_HOST
-               value: 146.148.60.247
-labels:
-  name: guestbook
+              - key: RDB_HOST
+                value: 130.211.149.116
+    labels:
+      name: guestbook

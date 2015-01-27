@@ -1,10 +1,10 @@
-id: guest-demo-master
+id: guest-demo
 kind: Pod
 apiVersion: v1beta1
 desiredState:
   manifest:
     version: v1beta1
-    id: guest-demo-master
+    id: guest-demo
     containers:
       - name: guest-demo
         image: danmcginnis/guest-demo
@@ -15,6 +15,6 @@ desiredState:
            hostPort: 5000
         env:
          - key: RDB_HOST
-           value: 146.148.87.245 
+           value: 130.211.149.116 
 labels:
   name: guest-demo

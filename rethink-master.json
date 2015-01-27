@@ -7,7 +7,7 @@
 	    "version": "v1beta1",
 	    "id": "rethink-master",
 	    "containers": [{
-		"name": "master",
+		"name": "rethink-master",
 		"image": "dockerfile/rethinkdb",
 		"cpu": 100,
 		"ports": [{

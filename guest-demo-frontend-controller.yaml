@@ -2,7 +2,7 @@ id: guestbook
 kind: ReplicationController
 apiVersion: v1beta1
 desiredState:
-  replicas: 3
+  replicas: 2
   replicaSelector:
     name: guestbook
   # This template is basically identical to the single pod
@@ -20,6 +20,7 @@ desiredState:
               - name: api
                 containerPort: 5000
                 hostPort: 5000
+# Fill this value out with the ip of the minion running the rethink container
             env:
               - key: RDB_HOST
                 value: 130.211.149.116

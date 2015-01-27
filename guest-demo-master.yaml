@@ -13,6 +13,7 @@ desiredState:
          - name: api
            containerPort: 5000 
            hostPort: 5000
+# Fill this value out with the ip of the minion running the rethink container
         env:
          - key: RDB_HOST
            value: 130.211.149.116 

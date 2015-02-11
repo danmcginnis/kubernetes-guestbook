@@ -1,0 +1,26 @@
+id: random-number
+kind: ReplicationController
+apiVersion: v1beta1
+desiredState:
+  replicas: 2
+  replicaSelector:
+  name: random-number
+  # This template is basically identical to the single pod
+  # definition above
+  podTemplate:
+    desiredState:
+      manifest:
+        version: v1beta1
+	id: random-number
+        containers:
+		- name: random-number
+            image: danmcginnis/guest-demo
+            cpu: 100
+            ports:
+              - name: api
+                containerPort: 80
+                hostPort: 80
+            command:
+		- python lottery/manage.py runserver 0.0.0.0:80
+    labels:
+	    name: random-number

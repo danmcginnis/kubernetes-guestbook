@@ -2,7 +2,7 @@ id: random-number
 kind: ReplicationController
 apiVersion: v1beta1
 desiredState:
-  replicas: 2
+  replicas: 4
   replicaSelector:
   name: random-number
   # This template is basically identical to the single pod

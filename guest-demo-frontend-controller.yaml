@@ -2,7 +2,7 @@ id: guestbook
 kind: ReplicationController
 apiVersion: v1beta1
 desiredState:
-  replicas: 2
+  replicas: 4
   replicaSelector:
     name: guestbook
   # This template is basically identical to the single pod
@@ -15,7 +15,7 @@ desiredState:
         containers:
           - name: guestbook
             image: danmcginnis/guest-demo
-            cpu: 1000
+            cpu: 100
             ports:
               - name: api
                 containerPort: 5000

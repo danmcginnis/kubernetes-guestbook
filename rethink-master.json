@@ -1,13 +1,13 @@
 {
-    "id": "rethink-master",
+    "id": "database-master",
     "kind": "Pod",
     "apiVersion": "v1beta1",
     "desiredState": {
 	"manifest": {
 	    "version": "v1beta1",
-	    "id": "rethink-master",
+	    "id": "database-master",
 	    "containers": [{
-		"name": "rethink-master",
+		"name": "database-master",
 		"image": "dockerfile/rethinkdb",
 		"cpu": 100,
 		"ports": [{
@@ -26,6 +26,6 @@
 	}
     },
     "labels": {
-	"name": "rethink-master"
+	"name": "database-master"
     }
 }

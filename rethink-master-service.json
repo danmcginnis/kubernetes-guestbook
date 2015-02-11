@@ -1,13 +1,13 @@
 {
-    "id": "rethink-master",
+    "id": "database-master",
     "kind": "Service",
     "apiVersion": "v1beta1",
     "port": 28015,
     "containerPort": 28015,
     "selector": {
-	"name": "rethink-master"
+	"name": "database-master"
     },
     "labels": {
-	"name": "rethink-master"
+	"name": "database-master"
     }
 }

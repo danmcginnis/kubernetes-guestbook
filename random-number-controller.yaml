@@ -13,8 +13,8 @@ desiredState:
         version: v1beta1
 	id: random-number
         containers:
-		- name: random-number
-            image: danmcginnis/guest-demo
+          - name: random-number
+            image: benraj/webdemo:demo 
             cpu: 100
             ports:
               - name: api
